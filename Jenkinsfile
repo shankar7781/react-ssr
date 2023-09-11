@@ -8,7 +8,7 @@ pipeline {
             steps {
                dir('react-ssr/') {
                 script {
-                   // sh ' sudo docker build -t shankar123321/react-ssr- . '
+                    sh ' sudo docker build -t shankar123321/react-ssr- . '
                     sh ' pwd '
                 }
                }
@@ -20,7 +20,7 @@ pipeline {
                dir('react-ssr/') {
                 script {
                     // Run the Docker container from the built image
-                    //sh ' sudo docker run -d -p 2048:2048 shankar123321/react-ssr-:latest '
+                     sh ' sudo docker run -d -p 2048:2048 shankar123321/react-ssr-:latest '
                     sh ' echo "test" '
                 }
                }
