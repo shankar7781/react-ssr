@@ -29,7 +29,7 @@ pipeline {
     post {
         success {
             // Notify or perform actions when the pipeline succeeds
-            sh ' echo "success"
+            sh ' echo "success" '
          }
         failure {
             // Notify or perform actions when the pipeline fails
