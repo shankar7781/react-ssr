@@ -10,7 +10,7 @@ pipeline {
                 script {
                     def buildId = sh(script: 'date +%Y%m%d%H%M%S', returnStdout: true).trim()
                     sh '  docker build -t shankar123321/react-ssr:$buildId . '
-                    'sh "docker rmi -f \$(docker images shankar123321/react-ssr -q)"
+                    sh ' docker rmi -f \$(docker images shankar123321/react-ssr -q) '
                     
                     sh ' pwd '
                
