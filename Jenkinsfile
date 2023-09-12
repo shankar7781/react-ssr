@@ -7,7 +7,7 @@ pipeline {
                 script {
                     def buildId = sh(script: 'date +%Y%m%d%H%M%S', returnStdout: true).trim()
                    // sh "docker rmi  \$(docker images -aq)"
-                    sh "docker build -t shankar123321/react-ssr:$buildId ."
+                    sh "docker build -t shankar123321/react-ssr:${buildId} ."
                     sh 'pwd'
                 }
             }
@@ -18,7 +18,7 @@ pipeline {
                 script {
                     def buildId = sh(script: 'date +%Y%m%d%H%M%S', returnStdout: true).trim()
                     // Run the Docker container from the built image
-                    sh "docker run -d -p 2048:2048 shankar123321/react-ssr:$buildId"
+                    sh "docker run -d -p 2048:2048 shankar123321/react-ssr:${buildId}"
                   //  sh "docker rmi  \$(docker images shankar123321/react-ssr -q)"
 
                     sh 'echo "test"'
